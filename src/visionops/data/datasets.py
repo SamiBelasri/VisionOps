@@ -41,7 +41,11 @@ def build_dataset(
 
     if spec.name == "intel":
         split = "seg_train" if train else "seg_test"
+        # Accept both the extracted Kaggle layout (root/seg_train/seg_train)
+        # and a direct ImageFolder split supplied by the caller.
         split_root = root / split
+        if not split_root.exists() and any(path.is_dir() for path in root.glob("*")):
+            split_root = root
         if not split_root.exists():
             raise FileNotFoundError(
                 f"Intel dataset split not found: {split_root}. "
