@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.env
+
+# Local data and experiment outputs
+data/raw/
+data/processed/
+mlruns/
+outputs/
+checkpoints/
+
+# Notebooks' generated metadata
+.ipynb_checkpoints/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store

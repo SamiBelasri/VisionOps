@@ -1,0 +1,18 @@
+dataset:
+  name: eurosat
+  root: data/raw/eurosat
+  image_size: 224
+
+model:
+  name: resnet18
+  pretrained: true
+
+training:
+  seed: 42
+  epochs: 5
+  batch_size: 32
+  learning_rate: 0.0003
+
+tracking:
+  backend: mlflow
+  experiment_name: visionops-classification
