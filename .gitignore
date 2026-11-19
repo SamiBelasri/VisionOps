@@ -13,6 +13,7 @@ data/processed/
 mlruns/
 outputs/
 checkpoints/
+reports/
 
 # Notebooks' generated metadata
 .ipynb_checkpoints/
